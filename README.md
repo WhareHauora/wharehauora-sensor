@@ -1,5 +1,6 @@
 # whareora-arduino
 
+[![Build Status](https://travis-ci.org/WhareHauora/wharehauora-sensor.svg?branch=bw%2Ftravis)](https://travis-ci.org/WhareHauora/wharehauora-sensor)
 
 New Zealand's housing is cold, damp, mouldy. Lack of heating and insulation means that homes are ill-equipped to deal with winter temperatures. These poor conditions are linked to increased illnesses and infection. Our homes are making us sick. 
 

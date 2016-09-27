@@ -2,18 +2,22 @@
 #define MY_DEBUG
 #define MY_DEBUG_VERBOSE
 
-#define HUMIDITY_SENSOR_DIGITAL_PIN 4
 #define SLEEP_TIME 30000 // Sleep time between reads (in milliseconds)
 
-#include <MySensors.h>
-#include <SPI.h>
-#include <DHT.h>
+// The temp and humidity sensor
+#define DHT_PIN 4
+#define DHT_TYPE DHT22
+#include "DHT.h"
+DHT dht(DHTPIN, DHTTYPE);
 
+
+// the rf comms library
+#include <SPI.h>
+#include <MySensors.h>
+
+// the two "messages" we send
 #define CHILD_ID_HUM 0
 #define CHILD_ID_TEMP 1
-
-DHT dht;
-
 MyMessage msgHum(CHILD_ID_HUM, V_HUM);
 MyMessage msgTemp(CHILD_ID_TEMP, V_TEMP);
 
