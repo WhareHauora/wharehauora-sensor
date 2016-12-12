@@ -1,3 +1,5 @@
+#!/bin/bash
+set -euv
 
 # install random lib so the arduino IDE grabs a new library index
 # see: https://github.com/arduino/Arduino/issues/3535
