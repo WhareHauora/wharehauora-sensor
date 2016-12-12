@@ -5,14 +5,14 @@
 #define DHT_PIN 4
 #define DHT_TYPE DHT22
 
+// the two "messages" we send
+#define CHILD_ID_HUM 0
+#define CHILD_ID_TEMP 1
 
 // the rf comms library
 #include <SPI.h>
 #include <MySensors.h>
 
-// the two "messages" we send
-#define CHILD_ID_HUM 0
-#define CHILD_ID_TEMP 1
 // Adafruit unified sensor library
 #include <Adafruit_Sensor.h>
 #include <DHT.h>
