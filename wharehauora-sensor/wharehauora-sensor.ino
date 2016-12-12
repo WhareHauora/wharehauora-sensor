@@ -1,6 +1,5 @@
 #define MY_RADIO_NRF24
 #define MY_DEBUG
-#define MY_DEBUG_VERBOSE
 
 #define SLEEP_TIME 30000 // Sleep time between reads (in milliseconds)
 
