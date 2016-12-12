@@ -1,10 +1,5 @@
 language: c
 install:
-  - gem install overcommit
-  - overcommit -i
-  - overcommit --sign
   - ./tests/install.sh
-  - ./tests/install_deps.sh
 script:
-  - overcommit -r
   - arduino --verify --board arduino:avr:uno wharehauora-sensor/wharehauora-sensor.ino
