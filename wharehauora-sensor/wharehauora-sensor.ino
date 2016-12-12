@@ -1,56 +1,93 @@
 #define MY_RADIO_NRF24
 #define MY_DEBUG
-#define MY_DEBUG_VERBOSE
-
-#define SLEEP_TIME 30000 // Sleep time between reads (in milliseconds)
 
 // The temp and humidity sensor
 #define DHT_PIN 4
 #define DHT_TYPE DHT22
-#include "DHT.h"
-DHT dht(DHTPIN, DHTTYPE);
 
+// the two "messages" we send
+#define CHILD_ID_HUM 0
+#define CHILD_ID_TEMP 1
 
 // the rf comms library
 #include <SPI.h>
 #include <MySensors.h>
 
-// the two "messages" we send
-#define CHILD_ID_HUM 0
-#define CHILD_ID_TEMP 1
+// Adafruit unified sensor library
+#include <Adafruit_Sensor.h>
+#include <DHT.h>
+#include <DHT_U.h>
+
+DHT_Unified dht(DHT_PIN, DHT_TYPE);
+
+uint32_t delayMS;
+
 MyMessage msgHum(CHILD_ID_HUM, V_HUM);
 MyMessage msgTemp(CHILD_ID_TEMP, V_TEMP);
 
 void presentation() {
+  sendSketchInfo("WhareSensor", "2.1");
   present(CHILD_ID_HUM, S_HUM);
   present(CHILD_ID_TEMP, S_TEMP);
 }
 
-void setup() {
-  dht.setup(HUMIDITY_SENSOR_DIGITAL_PIN);
+void before() {
+  dht.begin();
+  Serial.println("DHTxx Unified Sensor Example");
+
+  // Print temperature sensor details.
+  sensor_t sensor;
+  dht.temperature().getSensor(&sensor);
+  Serial.println("------------------------------------");
+  Serial.println("Temperature");
+  Serial.print  ("Sensor:       "); Serial.println(sensor.name);
+  Serial.print  ("Driver Ver:   "); Serial.println(sensor.version);
+  Serial.print  ("Unique ID:    "); Serial.println(sensor.sensor_id);
+  Serial.print  ("Max Value:    "); Serial.print(sensor.max_value); Serial.println(" *C");
+  Serial.print  ("Min Value:    "); Serial.print(sensor.min_value); Serial.println(" *C");
+  Serial.print  ("Resolution:   "); Serial.print(sensor.resolution); Serial.println(" *C");
+  Serial.println("------------------------------------");
+  // Print humidity sensor details.
+  dht.humidity().getSensor(&sensor);
+  Serial.println("------------------------------------");
+  Serial.println("Humidity");
+  Serial.print  ("Sensor:       "); Serial.println(sensor.name);
+  Serial.print  ("Driver Ver:   "); Serial.println(sensor.version);
+  Serial.print  ("Unique ID:    "); Serial.println(sensor.sensor_id);
+  Serial.print  ("Max Value:    "); Serial.print(sensor.max_value); Serial.println("%");
+  Serial.print  ("Min Value:    "); Serial.print(sensor.min_value); Serial.println("%");
+  Serial.print  ("Resolution:   "); Serial.print(sensor.resolution); Serial.println("%");
+  Serial.println("------------------------------------");
+  // Set delay between sensor readings based on sensor details.
+  delayMS = sensor.min_delay / 1000;
 }
 
 void loop() {
-  wait(dht.getMinimumSamplingPeriod());
-
-  //Temperature
-  float temperature = dht.getTemperature();
-  if (isnan(temperature)) {
-    Serial.println("Failed reading temperature from DHT");
+  // Get temperature event and print its value.
+  sensors_event_t event;
+  dht.temperature().getEvent(&event);
+  if (isnan(event.temperature)) {
+    Serial.println("Error reading temperature!");
   }
   else {
-    send(msgTemp.set(temperature, 1));
+    Serial.print("Temperature: ");
+    Serial.print(event.temperature);
+    Serial.println(" *C");
+    send(msgTemp.set(event.temperature, 1));
   }
-
-  // humidity
-  float humidity = dht.getHumidity();
-  if (isnan(humidity)) {
-    Serial.println("Failed reading humidity from DHT");
+  // Get humidity event and print its value.
+  dht.humidity().getEvent(&event);
+  if (isnan(event.relative_humidity)) {
+    Serial.println("Error reading humidity!");
   }
   else {
-    send(msgHum.set(humidity, 1));
+    Serial.print("Humidity: ");
+    Serial.print(event.relative_humidity);
+    Serial.println("%");
+    send(msgHum.set(event.relative_humidity, 1));
   }
-  sleep(SLEEP_TIME); //sleep a bit
+
+  delay(delayMS);
 }
 
 

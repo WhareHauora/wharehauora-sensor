@@ -1,9 +1,16 @@
+#!/bin/bash
+set -uv
 
-# install random lib so the arduino IDE grabs a new library index
-# see: https://github.com/arduino/Arduino/issues/3535
-echo -n "UPDATE LIBRARY INDEX: "
-DEPENDENCY_OUTPUT=$(arduino --install-library USBHost > /dev/null 2>&1)
-if [ $? -ne 0 ]; then echo -e "\xe2\x9c\x96"; else echo -e "\xe2\x9c\x93"; fi
+wget https://github.com/adafruit/DHT-sensor-library/archive/1.3.0.tar.gz
+tar -vzxf 1.3.0.tar.gz
 
-arduino --install-library "MySensors:2.0.0"
-arduino --install-library "DHT sensor library:1.2.3"
+wget https://github.com/mysensors/MySensors/archive/2.0.0.tar.gz
+tar -vzxf 2.0.0.tar.gz
+
+wget https://github.com/adafruit/Adafruit_DHT_Unified/archive/1.0.0.tar.gz
+tar -vzxf 1.0.0.tar.gz
+
+wget https://github.com/adafruit/Adafruit_Sensor/archive/1.0.2.tar.gz
+tar -vzxf 1.0.2.tar.gz
+
+sudo mv Adafruit_DHT_Unified-1.0.0 Adafruit_Sensor-1.0.2 MySensors-2.0.0 DHT-sensor-library-1.3.0 /usr/local/share/arduino/libraries/
