@@ -2,6 +2,7 @@ language: c
 install:
   - gem install overcommit
   - overcommit -i
+  - overcommit --sign
   - ./tests/install.sh
   - ./tests/install_deps.sh
 script:
