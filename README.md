@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/WhareHauora/wharehauora-sensor.png?label=ready&title=Ready)](https://waffle.io/WhareHauora/wharehauora-sensor)
 # whareora-sensor
 
 [![Build Status](https://travis-ci.org/WhareHauora/wharehauora-sensor.svg?branch=bw%2Ftravis)](https://travis-ci.org/WhareHauora/wharehauora-sensor)
