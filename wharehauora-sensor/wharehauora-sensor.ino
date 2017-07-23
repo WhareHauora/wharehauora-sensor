@@ -20,7 +20,7 @@
 
 DHT_Unified dht(DHT_PIN, DHT_TYPE);
 
-uint32_t delayMS;
+uint32_t delayMS = 30*1000;
 
 MyMessage msgHum(CHILD_ID_HUM, V_HUM);
 MyMessage msgTemp(CHILD_ID_TEMP, V_TEMP);
@@ -59,7 +59,6 @@ void before() {
   Serial.print  ("Resolution:   "); Serial.print(sensor.resolution); Serial.println("%");
   Serial.println("------------------------------------");
   // Set delay between sensor readings based on sensor details.
-  delayMS = sensor.min_delay / 1000;
 }
 
 void loop() {
@@ -87,6 +86,7 @@ void loop() {
     send(msgHum.set(event.relative_humidity, 1));
   }
 
+  Serial.print("Sleeping for 30 seconds");
   delay(delayMS);
 }
 
