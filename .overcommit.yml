@@ -18,6 +18,9 @@
 PreCommit:
   TrailingWhitespace:
     enabled: true
+    exclude:
+      - '**/*.brd'
+      - '**/*.sch'
   HardTabs:
    enabled: true
 
