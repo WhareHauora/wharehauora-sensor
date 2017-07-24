@@ -7,4 +7,4 @@ before_install:
 install:
   - ./tests/install.sh
 script:
-  - arduino --verify --board arduino:avr:uno wharehauora-sensor/wharehauora-sensor.ino
+  - cd arduino-sketches && arduino --verify --board arduino:avr:uno wharehauora-sensor/wharehauora-sensor.ino
