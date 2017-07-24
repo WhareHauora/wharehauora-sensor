@@ -9,3 +9,4 @@ install:
 script:
   - cd arduino-sketches && arduino --verify --board arduino:avr:uno wharehauora-sensor/wharehauora-sensor.ino
   - overcommit --install && overcommit --sign && overcommit --run
+
