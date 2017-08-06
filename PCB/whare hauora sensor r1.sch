@@ -3,7 +3,7 @@
 <eagle version="7.6.0">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -1352,14 +1352,14 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-1.016" y1="0.381" x2="-1.016" y2="-0.381" width="0.127" layer="21"/>
 <wire x1="-0.381" y1="1.016" x2="13.081" y2="1.016" width="0.127" layer="21"/>
 <wire x1="13.081" y1="-1.016" x2="-0.381" y2="-1.016" width="0.127" layer="21"/>
-<text x="6.35" y="-2.54" size="1.27" layer="21" ratio="15" align="bottom-center">FTDI</text>
+<text x="6.35" y="-1.27" size="0.8128" layer="21" ratio="15" rot="R180" align="bottom-center">FTDI</text>
 <pad name="DTR" x="12.7" y="0" drill="1" diameter="1.6764"/>
-<text x="0" y="1.27" size="0.8128" layer="21" ratio="12" align="bottom-center">GND</text>
-<text x="2.54" y="1.27" size="0.8128" layer="21" ratio="12" align="bottom-center">CTS</text>
-<text x="5.08" y="1.27" size="0.8128" layer="21" ratio="12" align="bottom-center">VCC</text>
-<text x="7.62" y="1.27" size="0.8128" layer="21" ratio="12" align="bottom-center">RxD</text>
-<text x="10.16" y="1.27" size="0.8128" layer="21" ratio="12" align="bottom-center">TxD</text>
-<text x="12.7" y="1.27" size="0.8128" layer="21" ratio="12" align="bottom-center">DTR</text>
+<text x="0" y="1.27" size="0.6096" layer="21" ratio="12" align="bottom-center">GND</text>
+<text x="2.54" y="1.27" size="0.6096" layer="21" ratio="12" align="bottom-center">CTS</text>
+<text x="5.08" y="1.27" size="0.6096" layer="21" ratio="12" align="bottom-center">VCC</text>
+<text x="7.62" y="1.27" size="0.6096" layer="21" ratio="12" align="bottom-center">RxD</text>
+<text x="10.16" y="1.27" size="0.6096" layer="21" ratio="12" align="bottom-center">TxD</text>
+<text x="12.7" y="1.27" size="0.6096" layer="21" ratio="12" align="bottom-center">DTR</text>
 <text x="13.97" y="0" size="1.27" layer="25" ratio="15" align="center-left">&gt;NAME</text>
 </package>
 <package name="ISP">
@@ -1376,15 +1376,15 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-1.016" y1="0.381" x2="-1.016" y2="-5.461" width="0.127" layer="21"/>
 <wire x1="-0.381" y1="1.016" x2="2.921" y2="1.016" width="0.127" layer="21"/>
 <wire x1="2.921" y1="-6.096" x2="-0.381" y2="-6.096" width="0.127" layer="21"/>
-<text x="1.27" y="-7.62" size="1.27" layer="25" ratio="15" align="bottom-center">&gt;NAME</text>
+<text x="1.27" y="1.27" size="0.8128" layer="25" ratio="15" align="bottom-center">&gt;NAME</text>
 <pad name="GND" x="2.54" y="-5.08" drill="1" diameter="1.6764"/>
-<text x="-1.27" y="0" size="0.8128" layer="21" ratio="12" rot="R90" align="bottom-center">MISO</text>
-<text x="-1.27" y="-2.54" size="0.8128" layer="21" ratio="12" rot="R90" align="bottom-center">SCK</text>
-<text x="-1.27" y="-5.08" size="0.8128" layer="21" ratio="12" rot="R90" align="bottom-center">RST</text>
-<text x="3.81" y="0" size="0.8128" layer="21" ratio="12" rot="R270" align="bottom-center">VCC</text>
-<text x="3.81" y="-2.54" size="0.8128" layer="21" ratio="12" rot="R270" align="bottom-center">MOSI</text>
-<text x="3.81" y="-5.08" size="0.8128" layer="21" ratio="12" rot="R270" align="bottom-center">GND</text>
-<text x="1.27" y="1.27" size="1.27" layer="21" ratio="15" align="bottom-center">ISP</text>
+<text x="-1.27" y="0" size="0.6096" layer="21" ratio="12" rot="R90" align="bottom-center">MISO</text>
+<text x="-1.27" y="-2.54" size="0.6096" layer="21" ratio="12" rot="R90" align="bottom-center">SCK</text>
+<text x="-1.27" y="-5.08" size="0.6096" layer="21" ratio="12" rot="R90" align="bottom-center">RST</text>
+<text x="3.81" y="0" size="0.6096" layer="21" ratio="12" rot="R270" align="bottom-center">VCC</text>
+<text x="3.81" y="-2.54" size="0.6096" layer="21" ratio="12" rot="R270" align="bottom-center">MOSI</text>
+<text x="3.81" y="-5.08" size="0.6096" layer="21" ratio="12" rot="R270" align="bottom-center">GND</text>
+<text x="1.27" y="-6.35" size="0.8128" layer="21" ratio="15" rot="R180" align="bottom-center">ISP</text>
 </package>
 <package name="NRF24L01+">
 <pad name="P$1" x="0" y="0" drill="1" diameter="1.778" shape="square"/>
@@ -1655,6 +1655,8 @@ In this library the device names are the same as the pin names of the symbols, t
 </devices>
 </deviceset>
 <deviceset name="2AA-PACK" prefix="BATT">
+<description>PCB mount dual AA battery holder
+RS# 611-9598</description>
 <gates>
 <gate name="G$1" symbol="2AA-PACK" x="-7.62" y="2.54"/>
 </gates>
