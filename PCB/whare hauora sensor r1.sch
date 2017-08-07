@@ -1448,7 +1448,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="0" y1="5" x2="0" y2="-5" width="0.254" layer="21"/>
 <wire x1="0" y1="-9" x2="0" y2="-15.6" width="0.254" layer="21"/>
 <text x="2" y="13" size="1.6764" layer="25" ratio="10">&gt;NAME</text>
-<text x="2" y="11" size="1.6764" layer="27" ratio="10">2xAA BATT</text>
+<text x="2" y="11" size="1.6764" layer="27" ratio="10">&gt;VALUE</text>
 <hole x="28.8" y="0" drill="3"/>
 </package>
 <package name="SO8">
@@ -1800,7 +1800,7 @@ DIN A4, landscape with extra doc field</description>
 <part name="FRAME1" library="frames" deviceset="DINA4_L" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="SUPPLY4" library="supply2" deviceset="V+" device=""/>
-<part name="BATT1" library="Callum" deviceset="2AA-PACK" device=""/>
+<part name="BATT" library="Callum" deviceset="2AA-PACK" device="" value="2AA-PACK"/>
 <part name="IC2" library="Callum" deviceset="AT25DF512C" device="" value="AT25DF512C"/>
 </parts>
 <sheets>
@@ -12247,7 +12247,7 @@ DIN A4, landscape with extra doc field</description>
 <instance part="FRAME1" gate="G$2" x="162.56" y="0"/>
 <instance part="GND6" gate="1" x="45.72" y="50.8"/>
 <instance part="SUPPLY4" gate="1" x="45.72" y="66.04"/>
-<instance part="BATT1" gate="G$1" x="53.34" y="60.96"/>
+<instance part="BATT" gate="G$1" x="53.34" y="60.96"/>
 <instance part="IC2" gate="G$1" x="233.68" y="71.12"/>
 </instances>
 <busses>
@@ -12322,7 +12322,7 @@ DIN A4, landscape with extra doc field</description>
 <wire x1="246.38" y1="93.98" x2="246.38" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="BATT1" gate="G$1" pin="-"/>
+<pinref part="BATT" gate="G$1" pin="-"/>
 <pinref part="GND6" gate="1" pin="GND"/>
 <wire x1="48.26" y1="55.88" x2="45.72" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="55.88" x2="45.72" y2="53.34" width="0.1524" layer="91"/>
@@ -12446,7 +12446,7 @@ DIN A4, landscape with extra doc field</description>
 <wire x1="246.38" y1="111.76" x2="246.38" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="BATT1" gate="G$1" pin="+"/>
+<pinref part="BATT" gate="G$1" pin="+"/>
 <pinref part="SUPPLY4" gate="1" pin="V+"/>
 <wire x1="48.26" y1="60.96" x2="45.72" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="60.96" x2="45.72" y2="63.5" width="0.1524" layer="91"/>
