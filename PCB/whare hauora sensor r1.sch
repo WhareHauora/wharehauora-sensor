@@ -572,19 +572,21 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-1.9" y1="1.5" x2="2" y2="1.5" width="0.127" layer="51"/>
 <wire x1="2" y1="1.5" x2="2" y2="-1.5" width="0.127" layer="51"/>
 <wire x1="2" y1="-1.5" x2="-1.9" y2="-1.5" width="0.127" layer="51"/>
-<wire x1="-1.9" y1="1.5" x2="2" y2="1.5" width="0.127" layer="21"/>
+<wire x1="-1.7984" y1="1.5" x2="2" y2="1.5" width="0.127" layer="21"/>
 <wire x1="-1.9" y1="-1.5" x2="2" y2="-1.5" width="0.127" layer="21"/>
 <wire x1="2" y1="-0.6" x2="2" y2="-0.4" width="0.127" layer="21"/>
 <wire x1="2" y1="0.4" x2="2" y2="0.6" width="0.127" layer="21"/>
 <wire x1="-1.9" y1="-0.6" x2="-1.9" y2="-0.4" width="0.127" layer="21"/>
 <wire x1="-1.9" y1="0.4" x2="-1.9" y2="0.6" width="0.127" layer="21"/>
-<wire x1="-1.9" y1="1.5" x2="-1.9" y2="1.4" width="0.127" layer="21"/>
+<wire x1="-1.7984" y1="1.5" x2="-1.9" y2="1.4" width="0.127" layer="21"/>
 <wire x1="2" y1="1.5" x2="2" y2="1.4" width="0.127" layer="21"/>
 <wire x1="2" y1="-1.5" x2="2" y2="-1.4" width="0.127" layer="21"/>
 <wire x1="-1.9" y1="-1.4" x2="-1.9" y2="-1.5" width="0.127" layer="21"/>
 <text x="-1.9" y="-3" size="1.27" layer="27">&gt;VALUE</text>
 <text x="-1.9" y="1.7" size="1.27" layer="25">&gt;NAME</text>
 <smd name="P$1" x="0" y="0" dx="1.6" dy="2.5" layer="1"/>
+<wire x1="-1.397" y1="1.4986" x2="-1.8796" y2="1.016" width="0.127" layer="51"/>
+<circle x="-2.159" y="1.778" radius="0.127" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -1350,8 +1352,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="13.081" y1="1.016" x2="13.716" y2="0.381" width="0.127" layer="21" curve="-90"/>
 <wire x1="13.716" y1="0.381" x2="13.716" y2="-0.381" width="0.127" layer="21"/>
 <wire x1="-1.016" y1="0.381" x2="-1.016" y2="-0.381" width="0.127" layer="21"/>
-<wire x1="-0.381" y1="1.016" x2="13.081" y2="1.016" width="0.127" layer="21"/>
-<wire x1="13.081" y1="-1.016" x2="-0.381" y2="-1.016" width="0.127" layer="21"/>
+<wire x1="-0.381" y1="1.016" x2="1.016" y2="1.016" width="0.127" layer="21"/>
+<wire x1="1.016" y1="1.016" x2="13.081" y2="1.016" width="0.127" layer="21"/>
+<wire x1="13.081" y1="-1.016" x2="1.016" y2="-1.016" width="0.127" layer="21"/>
 <text x="6.35" y="-1.27" size="0.8128" layer="21" ratio="15" rot="R180" align="bottom-center">FTDI</text>
 <pad name="DTR" x="12.7" y="0" drill="1" diameter="1.6764"/>
 <text x="0" y="1.27" size="0.6096" layer="21" ratio="12" align="bottom-center">GND</text>
@@ -1361,6 +1364,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <text x="10.16" y="1.27" size="0.6096" layer="21" ratio="12" align="bottom-center">TxD</text>
 <text x="12.7" y="1.27" size="0.6096" layer="21" ratio="12" align="bottom-center">DTR</text>
 <text x="13.97" y="0" size="1.27" layer="25" ratio="15" align="center-left">&gt;NAME</text>
+<wire x1="1.016" y1="-1.016" x2="-0.381" y2="-1.016" width="0.127" layer="21"/>
+<wire x1="1.016" y1="1.016" x2="1.016" y2="-1.016" width="0.127" layer="21"/>
 </package>
 <package name="ISP">
 <pad name="MISO" x="0" y="0" drill="1" diameter="1.6764" shape="octagon"/>
@@ -1373,8 +1378,10 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="3.556" y1="-5.461" x2="2.921" y2="-6.096" width="0.127" layer="21" curve="-90"/>
 <wire x1="2.921" y1="1.016" x2="3.556" y2="0.381" width="0.127" layer="21" curve="-90"/>
 <wire x1="3.556" y1="0.381" x2="3.556" y2="-5.461" width="0.127" layer="21"/>
-<wire x1="-1.016" y1="0.381" x2="-1.016" y2="-5.461" width="0.127" layer="21"/>
-<wire x1="-0.381" y1="1.016" x2="2.921" y2="1.016" width="0.127" layer="21"/>
+<wire x1="-1.016" y1="0.381" x2="-1.016" y2="-1.016" width="0.127" layer="21"/>
+<wire x1="-1.016" y1="-1.016" x2="-1.016" y2="-5.461" width="0.127" layer="21"/>
+<wire x1="-0.381" y1="1.016" x2="1.016" y2="1.016" width="0.127" layer="21"/>
+<wire x1="1.016" y1="1.016" x2="2.921" y2="1.016" width="0.127" layer="21"/>
 <wire x1="2.921" y1="-6.096" x2="-0.381" y2="-6.096" width="0.127" layer="21"/>
 <text x="1.27" y="1.27" size="0.8128" layer="25" ratio="15" align="bottom-center">&gt;NAME</text>
 <pad name="GND" x="2.54" y="-5.08" drill="1" diameter="1.6764"/>
@@ -1385,6 +1392,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <text x="3.81" y="-2.54" size="0.6096" layer="21" ratio="12" rot="R270" align="bottom-center">MOSI</text>
 <text x="3.81" y="-5.08" size="0.6096" layer="21" ratio="12" rot="R270" align="bottom-center">GND</text>
 <text x="1.27" y="-6.35" size="0.8128" layer="21" ratio="15" rot="R180" align="bottom-center">ISP</text>
+<wire x1="-1.016" y1="-1.016" x2="0.508" y2="-1.016" width="0.127" layer="21"/>
+<wire x1="1.016" y1="1.016" x2="1.016" y2="-0.508" width="0.127" layer="21"/>
+<wire x1="0.508" y1="-1.016" x2="1.016" y2="-0.508" width="0.127" layer="21" curve="90"/>
 </package>
 <package name="NRF24L01+">
 <pad name="P$1" x="0" y="0" drill="1" diameter="1.778" shape="square"/>
@@ -1395,27 +1405,27 @@ In this library the device names are the same as the pin names of the symbols, t
 <pad name="P$6" x="-2.54" y="5.08" drill="1" diameter="1.778" shape="octagon"/>
 <pad name="P$7" x="0" y="7.62" drill="1" diameter="1.778" shape="octagon"/>
 <pad name="P$8" x="-2.54" y="7.62" drill="1" diameter="1.778" shape="octagon"/>
-<wire x1="1.27" y1="-2.54" x2="1.27" y2="12.7" width="0.254" layer="21"/>
-<wire x1="1.27" y1="-2.54" x2="-27.94" y2="-2.54" width="0.254" layer="21"/>
-<wire x1="-27.94" y1="-2.54" x2="-27.94" y2="12.7" width="0.254" layer="21"/>
-<wire x1="-27.94" y1="12.7" x2="1.27" y2="12.7" width="0.254" layer="21"/>
-<wire x1="-27.305" y1="12.065" x2="-27.305" y2="8.255" width="0.6096" layer="21"/>
-<wire x1="-27.305" y1="8.255" x2="-23.495" y2="8.255" width="0.6096" layer="21"/>
-<wire x1="-23.495" y1="8.255" x2="-23.495" y2="6.985" width="0.6096" layer="21"/>
-<wire x1="-23.495" y1="6.985" x2="-27.305" y2="6.985" width="0.6096" layer="21"/>
-<wire x1="-27.305" y1="6.985" x2="-27.305" y2="5.715" width="0.6096" layer="21"/>
-<wire x1="-27.305" y1="5.715" x2="-23.495" y2="5.715" width="0.6096" layer="21"/>
-<wire x1="-23.495" y1="5.715" x2="-23.495" y2="4.445" width="0.6096" layer="21"/>
-<wire x1="-23.495" y1="4.445" x2="-27.305" y2="4.445" width="0.6096" layer="21"/>
-<wire x1="-27.305" y1="4.445" x2="-27.305" y2="3.175" width="0.6096" layer="21"/>
-<wire x1="-27.305" y1="3.175" x2="-23.495" y2="3.175" width="0.6096" layer="21"/>
-<wire x1="-23.495" y1="3.175" x2="-23.495" y2="1.905" width="0.6096" layer="21"/>
-<wire x1="-23.495" y1="1.905" x2="-27.305" y2="1.905" width="0.6096" layer="21"/>
-<wire x1="-27.305" y1="1.905" x2="-27.305" y2="0.635" width="0.6096" layer="21"/>
-<wire x1="-27.305" y1="0.635" x2="-21.59" y2="0.635" width="0.6096" layer="21"/>
-<wire x1="-21.59" y1="0.635" x2="-21.59" y2="8.255" width="0.6096" layer="21"/>
-<text x="-27.305" y="13.335" size="1.778" layer="25" font="vector" ratio="10">&gt;NAME</text>
-<text x="-27.305" y="-5.08" size="1.778" layer="27" font="vector" ratio="10">&gt;VALUE</text>
+<wire x1="1.524" y1="-2.286" x2="1.524" y2="12.954" width="0.254" layer="21"/>
+<wire x1="1.524" y1="-2.286" x2="-27.686" y2="-2.286" width="0.254" layer="21"/>
+<wire x1="-27.686" y1="-2.286" x2="-27.686" y2="12.954" width="0.254" layer="21"/>
+<wire x1="-27.686" y1="12.954" x2="1.524" y2="12.954" width="0.254" layer="21"/>
+<wire x1="-27.051" y1="12.319" x2="-27.051" y2="8.509" width="0.6096" layer="21"/>
+<wire x1="-27.051" y1="8.509" x2="-23.241" y2="8.509" width="0.6096" layer="21"/>
+<wire x1="-23.241" y1="8.509" x2="-23.241" y2="7.239" width="0.6096" layer="21"/>
+<wire x1="-23.241" y1="7.239" x2="-27.051" y2="7.239" width="0.6096" layer="21"/>
+<wire x1="-27.051" y1="7.239" x2="-27.051" y2="5.969" width="0.6096" layer="21"/>
+<wire x1="-27.051" y1="5.969" x2="-23.241" y2="5.969" width="0.6096" layer="21"/>
+<wire x1="-23.241" y1="5.969" x2="-23.241" y2="4.699" width="0.6096" layer="21"/>
+<wire x1="-23.241" y1="4.699" x2="-27.051" y2="4.699" width="0.6096" layer="21"/>
+<wire x1="-27.051" y1="4.699" x2="-27.051" y2="3.429" width="0.6096" layer="21"/>
+<wire x1="-27.051" y1="3.429" x2="-23.241" y2="3.429" width="0.6096" layer="21"/>
+<wire x1="-23.241" y1="3.429" x2="-23.241" y2="2.159" width="0.6096" layer="21"/>
+<wire x1="-23.241" y1="2.159" x2="-27.051" y2="2.159" width="0.6096" layer="21"/>
+<wire x1="-27.051" y1="2.159" x2="-27.051" y2="0.889" width="0.6096" layer="21"/>
+<wire x1="-27.051" y1="0.889" x2="-21.336" y2="0.889" width="0.6096" layer="21"/>
+<wire x1="-21.336" y1="0.889" x2="-21.336" y2="8.509" width="0.6096" layer="21"/>
+<text x="-27.305" y="13.589" size="1.778" layer="25" font="vector" ratio="10">&gt;NAME</text>
+<text x="-27.305" y="-4.826" size="1.778" layer="27" font="vector" ratio="10">&gt;VALUE</text>
 </package>
 <package name="RF2">
 <pad name="P$1" x="0" y="0" drill="1" diameter="1.8" shape="square"/>
@@ -1437,16 +1447,16 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-45.72" y1="0.635" x2="-38.735" y2="0.635" width="0.3048" layer="51"/>
 </package>
 <package name="2AA-PACK\">
-<pad name="+" x="-1" y="7" drill="2" diameter="3.81"/>
-<pad name="-" x="-1" y="-7" drill="2" diameter="3.81"/>
+<pad name="+" x="-0.5" y="6.5" drill="2" diameter="3.81"/>
+<pad name="-" x="-0.5" y="-6.5" drill="2" diameter="3.81"/>
 <wire x1="0" y1="-15.6" x2="57.6" y2="-15.6" width="0.254" layer="21"/>
 <wire x1="0" y1="15.6" x2="57.6" y2="15.6" width="0.254" layer="21"/>
 <wire x1="57.6" y1="15.6" x2="57.6" y2="-15.6" width="0.254" layer="21"/>
-<wire x1="0" y1="-5" x2="0" y2="-9" width="0.254" layer="51"/>
-<wire x1="0" y1="5" x2="0" y2="9" width="0.254" layer="51"/>
-<wire x1="0" y1="15.6" x2="0" y2="9" width="0.254" layer="21"/>
-<wire x1="0" y1="5" x2="0" y2="-5" width="0.254" layer="21"/>
-<wire x1="0" y1="-9" x2="0" y2="-15.6" width="0.254" layer="21"/>
+<wire x1="0" y1="-4.25" x2="0" y2="-8.75" width="0.254" layer="51"/>
+<wire x1="0" y1="4.25" x2="0" y2="8.75" width="0.254" layer="51"/>
+<wire x1="0" y1="15.6" x2="0" y2="8.75" width="0.254" layer="21"/>
+<wire x1="0" y1="4.25" x2="0" y2="-4.25" width="0.254" layer="21"/>
+<wire x1="0" y1="-8.75" x2="0" y2="-15.6" width="0.254" layer="21"/>
 <text x="2" y="13" size="1.6764" layer="25" ratio="10">&gt;NAME</text>
 <text x="2" y="11" size="1.6764" layer="27" ratio="10">&gt;VALUE</text>
 <hole x="28.8" y="0" drill="3"/>
@@ -1464,14 +1474,14 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-0.635" y1="2.7178" x2="-1.0668" y2="2.7178" width="0.1524" layer="21"/>
 <wire x1="-1.0922" y1="2.667" x2="-1.0922" y2="-2.6924" width="0.0508" layer="21"/>
 <wire x1="0.635" y1="2.7178" x2="-0.635" y2="2.7178" width="0.1524" layer="21" curve="-180"/>
-<smd name="1" x="-2.3622" y="1.905" dx="0.762" dy="1.143" layer="1" rot="R270"/>
-<smd name="2" x="-2.3622" y="0.635" dx="0.762" dy="1.143" layer="1" rot="R270"/>
-<smd name="3" x="-2.3622" y="-0.635" dx="0.762" dy="1.143" layer="1" rot="R270"/>
-<smd name="4" x="-2.3622" y="-1.905" dx="0.762" dy="1.143" layer="1" rot="R270"/>
-<smd name="5" x="2.3622" y="-1.905" dx="0.762" dy="1.143" layer="1" rot="R90"/>
-<smd name="6" x="2.3622" y="-0.635" dx="0.762" dy="1.143" layer="1" rot="R90"/>
-<smd name="7" x="2.3622" y="0.635" dx="0.762" dy="1.143" layer="1" rot="R90"/>
-<smd name="8" x="2.3622" y="1.905" dx="0.762" dy="1.143" layer="1" rot="R90"/>
+<smd name="1" x="-2.54" y="1.905" dx="0.762" dy="1.524" layer="1" rot="R270"/>
+<smd name="2" x="-2.54" y="0.635" dx="0.762" dy="1.524" layer="1" rot="R270"/>
+<smd name="3" x="-2.54" y="-0.635" dx="0.762" dy="1.524" layer="1" rot="R270"/>
+<smd name="4" x="-2.54" y="-1.905" dx="0.762" dy="1.524" layer="1" rot="R270"/>
+<smd name="5" x="2.54" y="-1.905" dx="0.762" dy="1.524" layer="1" rot="R90"/>
+<smd name="6" x="2.54" y="-0.635" dx="0.762" dy="1.524" layer="1" rot="R90"/>
+<smd name="7" x="2.54" y="0.635" dx="0.762" dy="1.524" layer="1" rot="R90"/>
+<smd name="8" x="2.54" y="1.905" dx="0.762" dy="1.524" layer="1" rot="R90"/>
 <text x="-3.429" y="-4.318" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="-3.048" y="3.048" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <rectangle x1="-1.7653" y1="1.8415" x2="-1.2573" y2="1.9685" layer="21" rot="R270"/>
